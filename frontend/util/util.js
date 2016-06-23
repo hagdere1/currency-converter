@@ -1,7 +1,7 @@
 var Actions = require('../actions/actions'),
     _rates = [];
 
-module.exports = {
+var Util = {
   fetchExchangeRates: function () {
     $.ajax({
       url: "api/exchange_rates",
@@ -19,12 +19,15 @@ module.exports = {
       type: "post",
       dataType: "json",
       data: { exchange_rate: rate },
-      success: function () {
-        _rates.push(rate);
+      success: function (exchangeRate) {
+        _rates.push(exchangeRate);
         if (_rates.length === 31) {
           Actions.receiveRates(_rates);
           _rates = [];
         }
+      },
+      error: function () {
+        console.log("Failed to save exchange rates.");
       }
     });
   },
@@ -35,14 +38,19 @@ module.exports = {
       type: "GET",
       dataType: "jsonp",
       success: function (data) {
+        console.log(data);
         for (var exchangeRate in data.rates) {
           var rate = {};
           rate.date = data.date;
-          rate.rate = data.rates.exchangeRate;
+          rate.rate = data.rates[exchangeRate];
           rate.currency = exchangeRate;
+          debugger
           Util.createExchangeRate(rate);
         }
       }
     });
   },
 };
+
+module.exports = Util;
+window.Util = Util;

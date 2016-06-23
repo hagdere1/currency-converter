@@ -25,3 +25,4 @@ RateStore.__onDispatch = function (payload) {
 };
 
 module.exports = RateStore;
+window.Store = RateStore;

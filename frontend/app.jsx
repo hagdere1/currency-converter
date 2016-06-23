@@ -1,18 +1,16 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const Util = require('./util/util');
-const Store = require('./stores/store');
+var React = require('react'),
+    ReactDOM = require('react-dom'),
+    Util = require('./util/util'),
+    RateStore = require('./stores/store');
 
 var App = React.createClass({
-  render() {
+  render: function () {
     return (
       <div>Hello world</div>
     );
   }
 });
 
-debugger
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   ReactDOM.render(<App />, document.getElementById("root"));
 });

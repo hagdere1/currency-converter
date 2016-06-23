@@ -1,4 +1,4 @@
-class ExchangeRatesController < ApplicationController
+class Api::ExchangeRatesController < ApplicationController
   def index
     # limit to just the past day's rates, order descending
     @rates = ExchangeRate.all
@@ -7,14 +7,14 @@ class ExchangeRatesController < ApplicationController
   def create
     @rate = ExchangeRate.new(exchange_rate_params)
     if @rate.save
-      render :index
+      render json: @rate
     else
-      render json: @list.errors.full_messages, status: 422
+      render json: @rate.errors.full_messages, status: 422
     end
   end
 
   private
-  
+
     def exchange_rate_params
       params.require(:exchange_rate).permit(:date, :rate, :currency)
     end
