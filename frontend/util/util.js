@@ -44,7 +44,6 @@ var Util = {
           rate.date = data.date;
           rate.rate = data.rates[exchangeRate];
           rate.currency = exchangeRate;
-          debugger
           Util.createExchangeRate(rate);
         }
       }

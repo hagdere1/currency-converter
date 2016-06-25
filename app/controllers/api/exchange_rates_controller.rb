@@ -1,7 +1,7 @@
 class Api::ExchangeRatesController < ApplicationController
   def index
-    # limit to just the past day's rates, order descending
-    @rates = ExchangeRate.all
+    # limit to just the past day's rates, currency in alphabetical order
+    @rates = ExchangeRate.order(created_at: :desc).limit(31).sort_by {|rate| rate.currency}
   end
 
   def create
