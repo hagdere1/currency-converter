@@ -40,7 +40,7 @@ var App = React.createClass({
   },
 
   setAmount: function (e) {
-    this.setState({ amount: parseFloat(e.target.value) });
+    this.setState({ amount: e.target.value });
   },
 
   ratesOutdated: function () {
@@ -54,12 +54,15 @@ var App = React.createClass({
     e.preventDefault();
     // Set from and to rates to USD by default
     var fromRate = 1,
-        toRate = 1;
-
-    if (this.state.amount === "") {
-      return 0;
-    } else if (isNaN(this.state.amount % 1) || this.state.amount < 0) {
-      return -1;
+        toRate = 1,
+        amount = this.state.amount;
+debugger
+    if (amount === "") {
+      this.setState({ convertedAmount: 0, amount: "" });
+      return;
+    } else if (isNaN(amount) || amount < 0) {
+      this.setState({ convertedAmount: "Please enter a valid number.", amount: "" });
+      return;
     }
 
     this.state.rates.forEach(function (rate) {
@@ -70,7 +73,7 @@ var App = React.createClass({
       }
     }.bind(this));
 
-    this.setState({ convertedAmount: (1 / fromRate) * this.state.amount * toRate });
+    this.setState({ convertedAmount: (1 / fromRate) * parseFloat(amount) * toRate });
   },
 
   render: function () {
