@@ -1,28 +1,12 @@
-== README
+# Currency Converter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Currency Converter](app/assets/images/currency_calc_screenshot.png)](haikgregoryagdere.com/currency-converter)
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+Currency Converter
+is a currency exchange converter application built with Ruby on Rails and React.js/Flux.
 
-* System dependencies
+Its backend stores the exchange rates in a PostgreSQL database and makes an AJAX request to the Fixer.io API once per 24 hours to fetch the most current rates. The app's RESTful JSON API serves this data to the React frontend, which takes advantage of a Flux architecture.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+[Currency Converter]: <haikgregoryagdere.com/currency-converter>
