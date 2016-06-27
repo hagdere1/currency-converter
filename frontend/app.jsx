@@ -104,19 +104,21 @@ var App = React.createClass({
         </div>
         <div id="calculator">
           <form className="group" onSubmit={this.calculate}>
-            <div className="dropdown">
-              <label>From</label>
-              <select id="from_currency" onChange={this.setFromCurrency} value={this.state.from}>
-                <option value="USD">USD</option>;
-                  {fromCurrencies}
-              </select>
-            </div>
-            <div className="dropdown">
-              <label>To</label>
-              <select id="to_currency" onChange={this.setToCurrency} value={this.state.to}>
-                <option value="USD">USD</option>;
-                {toCurrencies}
-              </select>
+            <div className="currency_menus group">
+              <div className="dropdown">
+                <label>From</label>
+                <select id="from_currency" onChange={this.setFromCurrency} value={this.state.from}>
+                  <option value="USD">USD</option>;
+                    {fromCurrencies}
+                </select>
+              </div>
+              <div className="dropdown">
+                <label>To</label>
+                <select id="to_currency" onChange={this.setToCurrency} value={this.state.to}>
+                  <option value="USD">USD</option>;
+                  {toCurrencies}
+                </select>
+              </div>
             </div>
             <input type="number"
                    onChange={this.setAmount}

@@ -46,12 +46,15 @@ body {
   font-size: 18px;
 }
 
+.currency_menus {
+  float: left;
+  width: auto;
+}
+
 .dropdown {
   float: left;
   margin-right: 20px;
 }
-
-
 
 label {
   font-weight: bold;
@@ -78,9 +81,10 @@ input {
 }
 
 button {
+  float: left;
   display: block;
   width: 50%;
-  margin: 25px auto;
+  margin: 20px 25%;
   border: 1px solid #ccc;
   padding: 10px 0;
   background-color: #3983ce;
@@ -99,8 +103,15 @@ button:hover {
 }
 
 @media (max-width: 800px) {
-  .dropdown {
+  .currency_menus {
+    float: none;
+    margin-bottom: 30px;
+    text-align: center;
+  }
 
+  .dropdown {
+    display: inline-block;
+    float: none;
   }
 
   input {
@@ -111,5 +122,8 @@ button:hover {
 
   button {
     width: 75%;
+    margin-right: 12.5%;
+    margin-left: 12.5%;
+    margin-bottom: 20px;
   }
 }
