@@ -105,7 +105,7 @@ button:hover {
 @media (max-width: 800px) {
   .currency_menus {
     float: none;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     text-align: center;
   }
 
@@ -124,6 +124,43 @@ button:hover {
     width: 75%;
     margin-right: 12.5%;
     margin-left: 12.5%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 476px) {
+  #calculator {
+    padding: 20px 30px 25px 30px;
+  }
+
+  .currency_menus {
+    text-align: center;
+    float: none;
+  }
+
+  .dropdown {
+    float: none;
+    display: block;
+  }
+
+  .dropdown:first-child {
+    margin-bottom: 15px;
+  }
+
+  select {
+    margin: auto;
+  }
+
+  input {
+    float: none;
+    width: 85%;
+    display: block;
+  }
+
+  button {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
     margin-bottom: 20px;
   }
 }
