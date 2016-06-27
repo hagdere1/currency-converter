@@ -10,7 +10,6 @@
 body {
   background-color: #eeeeee;
   font-family: sans-serif;
-  text-transform: uppercase;
 }
 
 .group:after {
@@ -20,6 +19,7 @@ body {
 }
 
 #container {
+  text-transform: uppercase;
   width: 70%;
   max-width: 800px;
   border: 2px solid #004fa3;
