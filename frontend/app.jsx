@@ -7,9 +7,9 @@ var App = React.createClass({
     return (
       <div>
         <ul>
-          <li><a href="">Portfolio</a></li>
-          <li><a href="">GitHub</a></li>
-          <li><a href="">LinkedIn</a></li>
+          <li><a href="http://haikgregoryagdere.com/">Portfolio</a></li>
+          <li><a href="https://github.com/hagdere1">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/hgagdere">LinkedIn</a></li>
         </ul>
         <Calculator />
       </div>

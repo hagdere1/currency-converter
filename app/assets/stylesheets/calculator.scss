@@ -18,6 +18,25 @@ body {
   display: block;
 }
 
+ul {
+  text-align: center;
+  list-style: none;
+  right: 0;
+}
+
+li {
+  display: inline-block;
+  padding: 10px 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #004fa3;
+}
+
 #container {
   text-transform: uppercase;
   width: 70%;
