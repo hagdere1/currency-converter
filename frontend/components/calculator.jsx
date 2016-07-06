@@ -24,7 +24,7 @@ var Calculator = React.createClass({
 
   onChange: function () {
     this.setState({ rates: RateStore.all() });
-    if (this.state.rates.length === 0 || this.ratesOutdated()) {
+    if (this.state.rates.length < 31 || this.ratesOutdated()) {
       Util.updateExchangeRates();
     }
   },
