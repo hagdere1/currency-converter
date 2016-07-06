@@ -25,16 +25,13 @@ var Util = {
           Actions.receiveRates(_rates);
           _rates = [];
         }
-      },
-      error: function () {
-        console.log("Failed to save exchange rates.");
       }
     });
   },
 
   updateExchangeRates: function () {
     $.ajax({
-      url: "http://api.fixer.io/latest?base=USD",
+      url: "https://api.fixer.io/latest?base=USD",
       type: "GET",
       dataType: "jsonp",
       success: function (data) {
