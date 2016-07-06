@@ -35,7 +35,6 @@ var Util = {
       type: "GET",
       dataType: "jsonp",
       success: function (data) {
-        console.log(data);
         for (var exchangeRate in data.rates) {
           var rate = {};
           rate.date = data.date;
