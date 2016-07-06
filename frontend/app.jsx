@@ -3,7 +3,7 @@ var React = require('react'),
     Calculator = require('./components/calculator');
 
 var App = React.createClass({
-  render: function () {
+  render: function () { 
     return (
       <div>
         <ul>
