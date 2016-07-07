@@ -1,6 +1,6 @@
 # Currency Converter
 
-[![Currency Converter](currency_calc_screenshot.png)](http://haikgregoryagdere.com/currency-converter)
+[![Currency Converter](currency_calc_screenshot.png)](https://currency-converter-react.herokuapp.com/)
 
 ## Description
 
@@ -9,4 +9,4 @@ Its backend stores the exchange rates in a PostgreSQL database and makes an AJAX
 once per 24 hours to fetch the most current rates. The app's RESTful JSON API serves this data to the React
 frontend, which takes advantage of a Flux architecture.
 
-[Currency Converter]: <http://haikgregoryagdere.com/currency-converter>
+[Currency Converter]: <https://currency-converter-react.herokuapp.com/>
